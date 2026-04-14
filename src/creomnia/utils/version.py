@@ -1,13 +1,13 @@
 import shutil
 import subprocess
 
-from caelestia.utils.paths import config_dir
+from creomnia.utils.paths import config_dir
 
 
 def print_version() -> None:
     if shutil.which("pacman"):
         print("Packages:")
-        pkgs = ["caelestia-shell", "caelestia-cli", "caelestia-meta"]
+        pkgs = ["creomnia-shell", "creomnia-cli", "creomnia-meta"]
         versions = subprocess.run(
             ["pacman", "-Q", *pkgs], stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, text=True
         ).stdout
@@ -21,19 +21,19 @@ def print_version() -> None:
 
     print()
     try:
-        caelestia_dir = (config_dir / "hypr").resolve().parent
-        caelestia_ver = subprocess.check_output(
-            ["git", "--git-dir", caelestia_dir / ".git", "rev-list", "--format=%B", "--max-count=1", "HEAD"], text=True
+        creomnia_dir = (config_dir / "hypr").resolve().parent
+        creomnia_ver = subprocess.check_output(
+            ["git", "--git-dir", creomnia_dir / ".git", "rev-list", "--format=%B", "--max-count=1", "HEAD"], text=True
         )
-        print("Caelestia:")
-        print("    Last commit:", caelestia_ver.split()[1])
-        print("    Commit message:", *caelestia_ver.splitlines()[1:])
+        print("Creomnia:")
+        print("    Last commit:", creomnia_ver.split()[1])
+        print("    Commit message:", *creomnia_ver.splitlines()[1:])
     except subprocess.CalledProcessError:
-        print("Caelestia: not installed")
+        print("Creomnia: not installed")
 
     print()
     try:
-        shell_ver = subprocess.check_output(["/usr/lib/caelestia/version", "-s"], text=True).strip()
+        shell_ver = subprocess.check_output(["/usr/lib/creomnia/version", "-s"], text=True).strip()
         print("Shell:")
         print("    ", shell_ver)
     except FileNotFoundError:
@@ -46,7 +46,7 @@ def print_version() -> None:
     else:
         print("Quickshell: not in PATH")
 
-    local_shell_dir = config_dir / "quickshell/caelestia"
+    local_shell_dir = config_dir / "quickshell/creomnia"
     if local_shell_dir.exists():
         print("\nLocal copy of shell found:")
 

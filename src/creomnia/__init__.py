@@ -1,5 +1,5 @@
-from caelestia.parser import parse_args
-from caelestia.utils.version import print_version
+from creomnia.parser import parse_args
+from creomnia.utils.version import print_version
 
 
 def main() -> None:

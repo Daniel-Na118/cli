@@ -5,8 +5,8 @@ from argparse import Namespace
 from collections import ChainMap
 from typing import Any, Callable, cast
 
-from caelestia.utils import hypr
-from caelestia.utils.paths import user_config_path
+from creomnia.utils import hypr
+from creomnia.utils.paths import user_config_path
 
 
 def is_subset(superset, subset):

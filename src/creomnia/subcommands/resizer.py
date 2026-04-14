@@ -6,9 +6,9 @@ from argparse import Namespace
 from pathlib import Path
 from typing import Any, Dict, Optional
 
-from caelestia.utils import hypr
-from caelestia.utils.logging import log_message
-from caelestia.utils.paths import user_config_path
+from creomnia.utils import hypr
+from creomnia.utils.logging import log_message
+from creomnia.utils.paths import user_config_path
 
 
 class WindowRule:

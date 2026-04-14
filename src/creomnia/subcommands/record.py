@@ -7,8 +7,8 @@ from argparse import Namespace
 from datetime import datetime
 from pathlib import Path
 
-from caelestia.utils.notify import close_notification, notify
-from caelestia.utils.paths import recording_notif_path, recording_path, recordings_dir, user_config_path
+from creomnia.utils.notify import close_notification, notify
+from creomnia.utils.paths import recording_notif_path, recording_path, recordings_dir, user_config_path
 
 RECORDER = "gpu-screen-recorder"
 

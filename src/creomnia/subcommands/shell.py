@@ -1,7 +1,7 @@
 import subprocess
 from argparse import Namespace
 
-from caelestia.utils.paths import c_cache_dir
+from creomnia.utils.paths import c_cache_dir
 
 
 class Command:

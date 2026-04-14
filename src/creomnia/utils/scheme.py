@@ -3,8 +3,8 @@ import random
 from pathlib import Path
 from typing import Any
 
-from caelestia.utils.notify import notify
-from caelestia.utils.paths import atomic_dump, scheme_data_dir, scheme_path
+from creomnia.utils.notify import notify
+from creomnia.utils.paths import atomic_dump, scheme_data_dir, scheme_path
 
 
 class Scheme:

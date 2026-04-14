@@ -8,9 +8,9 @@ import shutil
 import fcntl
 from pathlib import Path
 
-from caelestia.utils.colour import get_dynamic_colours
-from caelestia.utils.logging import log_exception
-from caelestia.utils.paths import (
+from creomnia.utils.colour import get_dynamic_colours
+from creomnia.utils.logging import log_exception
+from creomnia.utils.paths import (
     c_state_dir,
     config_dir,
     data_dir,

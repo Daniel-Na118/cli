@@ -11,10 +11,10 @@ from materialyoucolor.hct import Hct
 from materialyoucolor.utils.color_utils import argb_from_rgb
 from PIL import Image
 
-from caelestia.utils.hypr import message
-from caelestia.utils.material import get_colours_for_image
-from caelestia.utils.colourfulness import get_variant
-from caelestia.utils.paths import (
+from creomnia.utils.hypr import message
+from creomnia.utils.material import get_colours_for_image
+from creomnia.utils.colourfulness import get_variant
+from creomnia.utils.paths import (
     compute_hash,
     user_config_path,
     wallpaper_link_path,
@@ -22,8 +22,8 @@ from caelestia.utils.paths import (
     wallpaper_thumbnail_path,
     wallpapers_cache_dir,
 )
-from caelestia.utils.scheme import Scheme, get_scheme
-from caelestia.utils.theme import apply_colours
+from creomnia.utils.scheme import Scheme, get_scheme
+from creomnia.utils.theme import apply_colours
 
 
 def is_valid_image(path: Path) -> bool:

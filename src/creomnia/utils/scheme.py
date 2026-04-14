@@ -155,7 +155,7 @@ class Scheme:
 
     def _update_colours(self) -> None:
         if self.name == "dynamic":
-            from caelestia.utils.material import get_colours_for_image
+            from creomnia.utils.material import get_colours_for_image
 
             try:
                 self._colours = get_colours_for_image()
@@ -165,10 +165,10 @@ class Scheme:
                         "-u",
                         "critical",
                         "Unable to set dynamic scheme",
-                        "No wallpaper set. Please set a wallpaper via `caelestia wallpaper` before setting a dynamic scheme.",
+                        "No wallpaper set. Please set a wallpaper via `creomnia wallpaper` before setting a dynamic scheme.",
                     )
                 raise ValueError(
-                    "No wallpaper set. Please set a wallpaper via `caelestia wallpaper` before setting a dynamic scheme."
+                    "No wallpaper set. Please set a wallpaper via `creomnia wallpaper` before setting a dynamic scheme."
                 )
         else:
             self._colours = read_colours_from_file(self.get_colours_path())

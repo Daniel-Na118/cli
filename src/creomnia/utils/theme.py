@@ -156,20 +156,20 @@ def apply_discord(scss: str) -> None:
         conf = subprocess.check_output(["sass", "-I", tmp_dir, templates_dir / "discord.scss"], text=True)
 
     for client in "Equicord", "Vencord", "BetterDiscord", "equibop", "vesktop", "legcord":
-        write_file(config_dir / client / "themes/caelestia.theme.css", conf)
+        write_file(config_dir / client / "themes/creomnia.theme.css", conf)
 
 
 @log_exception
 def apply_pandora(colours: dict[str, str], mode: str) -> None:
     template = gen_replace(colours, templates_dir / "pandora.json", hash=True)
     template = template.replace("{{ $mode }}", mode)
-    write_file(data_dir / "PandoraLauncher/themes/caelestia.json", template)
+    write_file(data_dir / "PandoraLauncher/themes/creomnia.json", template)
 
 
 @log_exception
 def apply_spicetify(colours: dict[str, str], mode: str) -> None:
     template = gen_replace(colours, templates_dir / f"spicetify-{mode}.ini")
-    write_file(config_dir / "spicetify/Themes/caelestia/color.ini", template)
+    write_file(config_dir / "spicetify/Themes/creomnia/color.ini", template)
 
 
 @log_exception
@@ -181,7 +181,7 @@ def apply_fuzzel(colours: dict[str, str]) -> None:
 @log_exception
 def apply_btop(colours: dict[str, str]) -> None:
     template = gen_replace(colours, templates_dir / "btop.theme", hash=True)
-    write_file(config_dir / "btop/themes/caelestia.theme", template)
+    write_file(config_dir / "btop/themes/creomnia.theme", template)
     subprocess.run(["killall", "-USR2", "btop"], stderr=subprocess.DEVNULL)
 
 
@@ -323,7 +323,7 @@ def apply_gtk(colours: dict[str, str], mode: str) -> None:
 @log_exception
 def apply_qt(colours: dict[str, str], mode: str) -> None:
     colours = gen_replace(colours, templates_dir / f"qt{mode}.colors", hash=True)
-    write_file(config_dir / "qtengine/caelestia.colors", colours)
+    write_file(config_dir / "qtengine/creomnia.colors", colours)
 
     config = (templates_dir / "qtengine.json").read_text()
     config = config.replace("{{ $mode }}", mode.capitalize())
@@ -336,12 +336,12 @@ def apply_warp(colours: dict[str, str], mode: str) -> None:
 
     template = gen_replace(colours, templates_dir / "warp.yaml", hash=True)
     template = template.replace("{{ $warp_mode }}", warp_mode)
-    write_file(data_dir / "warp-terminal/themes/caelestia.yaml", template)
+    write_file(data_dir / "warp-terminal/themes/creomnia.yaml", template)
 
 
 @log_exception
 def apply_zed(colours: dict[str, str], mode: str) -> None:
-    theme_path = config_dir / "zed/themes/caelestia.json"
+    theme_path = config_dir / "zed/themes/creomnia.json"
     # Zed's file watcher does not detect changes through symlinks,
     # so resolve to a regular file before writing
     if theme_path.is_symlink():

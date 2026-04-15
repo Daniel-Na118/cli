@@ -106,6 +106,10 @@ Install all [dependencies](#dependencies), then install
 e.g. via an AUR helper (yay)
 
 ```sh
+yay -S python python-pip
+
+yay -S python-pillow python-materialyoucolor
+
 yay -S libnotify swappy grim dart-sass app2unit wl-clipboard slurp gpu-screen-recorder glib2 cliphist fuzzel python-build python-installer python-hatch python-hatch-vcs
 ```
 

@@ -97,8 +97,8 @@ kneutralSelection 7D70BA
 kpositive 3E6B5E
 kpositiveSelection 6C3CB8
 text 2D1F3D
-subtext1 4A3A5A
-subtext0 6B5A7B
+subtext1 c6c5d1
+subtext0 90909a
 overlay2 B5A0CF
 overlay1 D8C8E8
 overlay0 EEE4F8
